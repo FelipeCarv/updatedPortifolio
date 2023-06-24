@@ -1,0 +1,40 @@
+*, span ,::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-x: hidden;
+    position: relative;
+    background-color: $bg-color;
+    @include typeface-body(p-menor, desktop);
+}
+
+svg, img{
+    display: block;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+
+    a{
+        text-decoration: none;
+    }
+    list-style: none;
+}
+
+.container{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,61 @@
+@mixin typeface-body($size, $device: desktop){
+    font-family: 'Poppins', sans-serif;
+
+
+    //h1
+    @if $size == h1 and $device == desktop{
+        font-size: 96px;
+        line-height: 120%;
+        font-weight: bold;
+    }@else if $size == h1 and $device == mobile{
+        font-size: 36px;
+        line-height: 120%;
+    }
+
+    //h2
+    @else if $size == h2 and $device == desktop{
+        font-size: 32px;
+        line-height: 120%;
+        font-weight: 900;
+    }@else if $size == h2 and $device == mobile{
+        font-size: 24px;
+        line-height: 120%;
+    }
+
+    //h3
+    @else if $size == h3 and $device == desktop{
+        font-size: 18px;
+        line-height: 120%;
+        font-weight: bold;
+    }@else if $size == h3 and $device == mobile{
+        font-size: 14px;
+        line-height: 120%;
+    }
+
+     //p
+    @else if $size == p and $device == desktop{
+        font-size: 24px;
+        line-height: 150%;
+    }@else if $size == p and $device == mobile{
+        font-size: 12px;
+        line-height: 120%;
+    }
+
+     //p
+    @else if $size == p-menor and $device == desktop{
+        font-size: 16px;
+        line-height: 150%;
+    }@else if $size == p and $device == mobile{
+        font-size: 12px;
+        line-height: 120%;
+    }
+
+    //button
+    @else if $size == button and $device == desktop{
+        font-size: 16px;
+        line-height: 120%;
+    }@else if $size == p and $device == mobile{
+        font-size: 12px;
+        line-height: 120%;
+    }
+}

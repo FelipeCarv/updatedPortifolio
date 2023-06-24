@@ -1,0 +1,680 @@
+header{
+    margin-bottom: 150px;
+
+    @include responsive(s){
+        margin-bottom: 100px;
+    }
+
+    .menu{
+        .menu-itens{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            padding-top: 40px;
+            @include typeface-body(button, desktop);
+
+            @include responsive(m){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                gap: 50px;
+            }
+            @include responsive(s){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                gap: 20px;
+            }
+
+            a{
+                color: $primary-dark;
+                text-transform: uppercase;
+                padding: 10px 20px;
+
+                &:hover{
+                    background-color: $blue;
+                    color: $bg-color;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+
+    position: relative;
+
+    &::after{
+        content: "";
+        display: block;
+        width: 500px;
+        height: 500px;
+        top: -400%;
+        left: -40%;
+        position: absolute;
+        border-radius: 382px;
+        background: var(--p-01, #634495);
+        filter: blur(100px);
+        overflow: hidden;
+
+        @include responsive(m){
+            width: 500px;
+            height: 500px;
+            top: -400%;
+            left: -40%;
+            z-index: -1;
+        }
+
+        @include responsive(s){
+            width: 500px;
+            height: 500px;
+            top: -500%;
+            left: -90%;
+            z-index: -1;
+        }
+    }
+}
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 350px;
+    @include responsive(s){
+        margin-bottom: 200px;
+
+    }
+   
+    .main__apresentacao{
+        position: relative;
+
+        h1{
+            @include typeface-body(h1, desktop);
+            color: $black;
+            @include responsive(m){
+                font-size: 36px;
+            }
+        }
+
+        h2{
+            @include typeface-body(h2, desktop);
+            margin-bottom: 40px;
+
+            @include responsive(m){
+                font-size: 16px;
+            }
+
+            @include responsive(s){
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .destaque{
+            color: $primary-color;
+        }
+
+        .main__componentes{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            
+            .curriculo{
+                border-radius: 50px;
+                border: 3px solid $primary-dark;
+                align-self: baseline;
+                padding: 15px 30px;
+                color: $primary-dark;
+                margin-bottom: 30px;
+
+                &:hover{
+                    transition: .3s;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                }
+
+                @include responsive(s){
+                    font-size: 12px;
+                }
+
+                @include responsive(s){
+                    padding: 10px 20px;
+                }
+            }
+
+            .redes__sociais{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    @include responsive(m){
+                        gap: 20px;
+                    }
+                    li{
+                        background-color: $bg-color;
+                        border-radius: 50%;
+                        box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.22);
+                        padding: 20px;
+                        @include responsive(m){
+                            padding: 10px;
+                            max-width: 40px;
+                        }
+
+                        a{
+                            width: 100%;
+                        }
+
+                        &:hover{
+                            transition: .3s;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+        }
+
+        &::after{
+            content: "";
+            background: url(../img/texto-1.png) no-repeat left;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -22%;
+            right: 12%;
+            @include responsive(m){
+                background: url(../img/img3-m.png) no-repeat left;
+                top: -35%;
+                right: 5%;
+            }
+        }
+    }
+
+    .main__bg{
+        position: relative;
+        z-index: 0;
+
+        @include responsive(m){
+           max-width: 400px;
+        }
+        @include responsive(s){
+            display: none;
+        }
+
+        &::before{
+            content: "";
+            background: url(../svg/retangulo-azul.svg) no-repeat left;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: -100px;
+            left: 100px;
+            
+        }
+
+        &::after{
+            content: "";
+            background: url(../svg/detalhe-roxo.svg) no-repeat left;
+            display: block;
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            top: 60%;
+            left: 86%;
+        }
+    }
+}
+
+#sobre{
+    .sobre__conteudo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 140px;
+        position: relative;
+        margin-bottom: 150px;
+        z-index: 0;
+        
+        @include responsive(s){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        img{
+            @include responsive(m){
+                max-width: 400px;
+            }
+            @include responsive(s){
+                max-width: 300px;
+                
+            }
+        }
+
+        .sobre__informacao{
+            position: relative;
+
+            h2{
+                @include typeface-body(h2, desktop);
+                color: $black;
+                line-height: 30%;
+
+                @include responsive(m){
+                    font-size: 24px;
+                }
+            }
+            h1{
+                @include typeface-body(h1, desktop);
+                color: $blue;
+
+                @include responsive(m){
+                    font-size: 64px;
+                }
+            }
+            p{
+                @include typeface-body(p, desktop);
+                color: $black;
+                text-align: justify;
+
+                @include responsive(m){
+                    font-size: 16px;
+                }
+
+                @include responsive(s){
+                    font-size: 14px;
+                    max-width: 300px;
+                }
+            }
+
+            &::after{
+                content: "";
+                display: block;
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                border-radius: 382px;
+                background: var(--s-01, #5EB9FB);
+                filter: blur(100px);
+                bottom: 80%;
+                left: 100%;
+                overflow: hidden;
+                
+            }
+        }
+
+        &::before{
+            content: "";
+            background: url(../svg/retangulo-roxo.svg) no-repeat left;
+            display: block;
+            width: 560px;
+            height: 140px;
+            position: absolute;
+            z-index: -1;
+            top: 30px;
+            left: -35px;
+            @include responsive(m){
+                width: 100px;
+                height: 200px;
+            }
+
+            @include responsive(s){
+                width: 100px;
+                height: 100px;
+            }
+            
+        }
+
+        &::after{
+            content: "";
+            background: url(../svg/detalhes-azul.svg) no-repeat left;
+            display: block;
+            width: 280px;
+            height: 60px;
+            position: absolute;
+            top: 92%;
+            left: 30%;
+            @include responsive(m){
+                left: 20%;
+            }
+            @include responsive(m){
+                left: 20%;
+                top: 40%;
+            }
+        }
+    }
+}
+
+#carrossel{
+    margin-bottom: 300px;
+    position: relative;
+    @include responsive(s){
+     display: none;           
+    }
+    @include responsive(m){
+        margin-bottom: 200px;
+    }
+    
+    .card-swipper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+            
+        .card{
+            border-radius: 20px;
+            background: rgba(242, 241, 243, 0.50);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(25px);
+            width: 100px;
+            height: 100px;
+
+            @include responsive(m){
+                width: 60px;
+                height: 60px;
+                border-radius: 10px;
+            }
+
+            
+
+            img{
+                padding: 20px;
+                width: 100px;
+                height: 100px;
+                @include responsive(m){
+                    padding: 10px;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @include responsive(s){
+                    
+                }
+
+            }
+        }
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        width: 30%;
+        height: 400px;
+        position: absolute;
+        border-radius: 382px;
+        background: var(--p-01, #634495);
+        filter: blur(100px);
+        top: -150px;
+        left: -400px;
+        overflow: hidden;
+    }
+}
+
+#projetos{
+    position: relative;
+    margin-bottom: 300px;
+
+    &::after{
+        content: "";
+        background: url(../img/texto2.png) no-repeat left;
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+        position: absolute;
+        top: -45%;
+        right: 6%;
+
+        @include responsive(m){
+            background: url(../img/img4-m.png) no-repeat left;
+            top: -47%;
+            right: 1%;
+        }
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        border-radius: 382px;
+        background: var(--s-01, #5EB9FB);
+        filter: blur(100px);
+        bottom: 40%;
+        left: 100%;
+        
+        overflow: hidden;
+    }
+
+    img{
+        max-width: 680px;
+    }
+
+    @include responsive(s){
+        .apresentacao{
+            display: none
+        }
+    }
+
+    h1{
+        @include typeface-body(h1, desktop);
+        color: $black;
+        @include responsive(m){
+            font-size: 64px;
+        }
+    }
+
+    .destaque{
+        color: $primary-color;
+    }
+
+    .projeto{
+        margin-bottom: 150px;
+    }
+
+    .projeto-right, .projeto-left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 150px;
+        
+        img{
+            @include responsive(m){
+                max-width: 520px;
+            }
+        }
+       
+        
+        .projeto__descricao{
+
+            h1{
+                color: $black;
+                display: inline-block;
+                position: relative;
+
+                @include responsive(m){
+                    font-size: 32px;
+                }
+
+                &::after{
+                    content: " ";
+                    display: block;
+                    height: 5px;
+                    width: 0%;
+                    background-color: $primary-light;
+                    position: absolute;
+                    bottom: 12%;
+                   
+                }
+
+                &:hover::after{
+                    width: 100%;
+                    transition: 0.3s;
+                }
+            }
+
+
+            p{
+                padding-bottom: 50px;
+                @include typeface-body(p-menor, desktop);
+                color: $black;
+
+                @include responsive(m){
+                    font-size: 12px;
+                    max-width: 350px
+                }
+                
+            }
+
+
+            .tech{
+                
+                h2{
+                    @include typeface-body(h2, desktop);
+                    color: $primary-light;
+                    margin-bottom: 20px;
+
+                    @include responsive(m){
+                        font-size: 18px;
+                    }
+                }
+
+                .tech__list{
+                    ul{
+                        display: flex;
+                        gap: 20px;
+
+                        li{
+                            border-radius: 20px;
+                            background: rgba(242, 241, 243, 0.50);
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            backdrop-filter: blur(25px);
+                            
+                            @include responsive(m){
+                                border-radius: 10px;
+                            }
+
+                            img{
+                                padding: 20px;
+                                width: 100px;
+                                height: 100px;
+
+                                @include responsive(m){
+                                padding: 10px;
+                                width: 40px;
+                                height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .projeto-left{
+        .projeto__descricao{
+            text-align: end;
+        }
+
+        .tech__list{
+            ul{
+                justify-content: end;
+            }
+        }
+    }
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+    position: relative;
+    z-index: 0;
+    
+    &::before{
+        content: "";
+        display: block;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        border-radius: 382px;
+        background: var(--s-01, #5EB9FB);
+        filter: blur(100px);
+        bottom: 50%;
+        z-index: -1;
+        right: 25%;
+        overflow: hidden;
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        border-radius: 382px;
+        background: var(--p-01, #634495);
+        filter: blur(100px);
+        top: -15%;
+        left: 25%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    h1{
+        @include typeface-body(h1, desktop);
+        color: $black;
+        padding-bottom: 60px;
+
+        @include responsive(s){
+           max-width: 300px;
+            font-size: 34px;
+           
+        }
+    }
+
+    .destaque{
+        color: $primary-color;
+    }
+
+     .redes__sociais{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    @include responsive(m){
+                        gap: 20px;
+                    }
+                    li{
+                        background-color: $bg-color;
+                        border-radius: 50%;
+                        box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.22);
+                        padding: 20px;
+                        @include responsive(m){
+                            padding: 10px;
+                            max-width: 40px;
+                        }
+
+                        a{
+                            width: 100%;
+                        }
+
+                        &:hover{
+                            transition: .3s;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+
+
+}
