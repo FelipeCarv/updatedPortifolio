@@ -576,8 +576,6 @@ header::after {
   content: "";
   background: url(../img/texto2.png) no-repeat left;
   display: block;
-  top: -45%;
-  right: 6%;
   width: 550px;
   height: 500px;
   position: absolute;

@@ -421,14 +421,13 @@ header{
         content: "";
         background: url(../img/texto2.png) no-repeat left;
         display: block;
-        top: -45%;
-        right: 6%;
         width: 550px;
         height: 500px;
         position: absolute;
         top: -10%;
         right: 65%;
         z-index: 0;
+        
         @include responsive(m){
             background: url(../img/img4-m.png) no-repeat left;
             top: -47%;
