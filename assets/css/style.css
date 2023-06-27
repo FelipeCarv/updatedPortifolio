@@ -585,9 +585,7 @@ header::after {
 }
 @media screen and (max-width: 960px) {
   #projetos::after {
-    background: url(../img/img4-m.png) no-repeat left;
-    top: -47%;
-    right: 1%;
+    display: none;
   }
 }
 #projetos::before {

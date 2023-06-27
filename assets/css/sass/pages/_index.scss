@@ -429,9 +429,7 @@ header{
         z-index: 0;
         
         @include responsive(m){
-            background: url(../img/img4-m.png) no-repeat left;
-            top: -47%;
-            right: 1%;
+            display: none;
         }
     }
 
