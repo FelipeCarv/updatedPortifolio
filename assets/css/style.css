@@ -232,6 +232,7 @@ header::after {
 }
 #main .main__apresentacao {
   position: relative;
+  z-index: 1;
 }
 #main .main__apresentacao h1 {
   font-family: "Poppins", sans-serif;
@@ -326,11 +327,12 @@ header::after {
   content: "";
   background: url(../img/texto-1.png) no-repeat left;
   display: block;
-  width: 100%;
+  width: 109%;
   height: 100%;
   position: absolute;
   top: -22%;
   right: 12%;
+  z-index: -1;
 }
 @media screen and (max-width: 960px) {
   #main .main__apresentacao::after {

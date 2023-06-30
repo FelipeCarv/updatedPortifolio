@@ -88,7 +88,7 @@ header{
    
     .main__apresentacao{
         position: relative;
-
+        z-index: 1;
         h1{
             @include typeface-body(h1, desktop);
             color: $black;
@@ -178,11 +178,12 @@ header{
             content: "";
             background: url(../img/texto-1.png) no-repeat left;
             display: block;
-            width: 100%;
+            width: 109%;
             height: 100%;
             position: absolute;
             top: -22%;
             right: 12%;
+            z-index: -1;
             @include responsive(m){
                 background: url(../img/img3-m.png) no-repeat left;
                 top: -35%;
